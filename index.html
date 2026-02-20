@@ -446,7 +446,7 @@
         currentVrm.scene.rotation.y = Math.PI + Math.sin(elapsed * 0.3) * 0.08;
         
         // === LOOK AT CURSOR ===
-        if (currentVrm.lookAt) {
+        if (currentVrm.lookAt && currentVrm.lookAt.target) {
           const targetX = mouseX * 1.5;
           const targetY = 1 + mouseY * 0.3;
           currentVrm.lookAt.target.set(targetX, targetY, 2);
